@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "sparse.h"
+#include "sparse_set.h"
 
 struct SomeData {
 	char c;

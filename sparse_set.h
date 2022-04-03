@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <vector>
 
 template<typename D>
@@ -7,6 +8,11 @@ struct SparseSetData {
 	size_t index;
 	D data;
 };
+
+template<typename D>
+std::ostream &operator<<(std::ostream &os, SparseSetData<D> const& m) {
+	return os << "\033[30;1m#" << m.index << "\033[0m" << m.data;
+}
 
 size_t INVALID_INDEX = -1;
 template<typename D>
